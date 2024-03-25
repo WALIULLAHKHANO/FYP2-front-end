@@ -25,7 +25,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import SimpleAccordion from "./accordian";
 
-import { BrowserRouter as Router, Link, Route,  } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import BinarySearch from "../components/search-algorithm/BinarySearch/binary-search";
 import BubbleSort from "../components/sorting-algorithm/bubble-sort/bubble-sort";
 import InsertionSort from "../components/sorting-algorithm/insertion-sort/insertion-sort";
@@ -386,16 +386,16 @@ export default function DrawerLeft() {
           </Link>
         </ListItem>
       </Drawer>
-
     
       <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,
         })}
       >
-        <Navbar />
-        <Router>
-          <Route path="/array" component={Arr} />
+       
+        <switch>
+       
+          {/* <Route path="/array" component={Arr} />
           <Route path="/stack" component={Stack} />
           <Route path="/queue" component={Que} />
 
@@ -416,13 +416,12 @@ export default function DrawerLeft() {
           <Route path="/signup" component={SignupForm} />
           <Route path="/login" component={LoginForm} />
           <Route path="/feedback" component={FeedbackForm} />
-          <Route path="/logout" component={Logout} />
+          <Route path="/logout" element={<Logout />} /> */}
 
           <Route path="/" component={Homepage} />
-        </Router>
-        
+          </switch>
       </main>
-   
+        
         
     </div>
   );
