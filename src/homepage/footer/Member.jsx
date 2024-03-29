@@ -5,7 +5,7 @@ const Member = (props) => {
   return (
     <li key={props.key}>
       <a href={props.LinkedInUrl}>
-        {/* <FaLinkedinIn className="linkedin-icon" size={30} /> */}
+        { <FaLinkedinIn className="linkedin-icon" size={30} /> }
 
         {props.name}
       </a>

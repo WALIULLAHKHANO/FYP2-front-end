@@ -8,8 +8,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./index.css";
-import { Drawer } from "@mui/material";
-//import DrawerLeft from "./material-uicomonents/drawer";
+// import  Drawer  from "@mui/material";
+import DrawerLeft from "./material-uicomonents/DrawerLeft";
 
 const container = document.getElementById('root');
 const root = createRoot(container); // Create root with container
@@ -17,7 +17,7 @@ const root = createRoot(container); // Create root with container
 root.render(
   <React.StrictMode>
     <App />
-    <Drawer />
+    <DrawerLeft />
   </React.StrictMode>
 );
 reportWebVitals();
